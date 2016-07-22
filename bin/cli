@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'boy-scout-rule'
+
+puts BoyScoutRule.merge(ARGV[0])
