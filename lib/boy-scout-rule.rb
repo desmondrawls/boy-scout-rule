@@ -1,4 +1,14 @@
 class BoyScoutRule
+  def self.merge(branch)
+    if branch.include? "refactor"
+      good_merge
+    else
+      bad_merge
+    end
+  end
+
+  private
+
   def self.good_merge
     puts "This branch will improve the maintainability of your codebase so we merged it automatically! Good work, scout!"
   end
