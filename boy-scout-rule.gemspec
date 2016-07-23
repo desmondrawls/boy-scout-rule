@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Pivotal beach"]
   s.email       = 'drawls@pivotal.io'
   s.files       = ["lib/boy-scout-rule.rb"]
+  s.executables = ["boy-scout"]
   s.homepage    =
     'http://rubygems.org/gems/boy-scout-rule'
   s.license       = 'MIT'
