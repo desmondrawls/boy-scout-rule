@@ -1,4 +1,11 @@
 #!/usr/bin/env ruby
 require 'boy-scout-rule'
 
-puts BoyScoutRule.merge(ARGV[0])
+action = ARGV[0]
+if action == "merge"
+  BoyScoutRule.merge(ARGV[1])
+elsif action == "report"
+  BoyScoutRule.report
+else
+  puts "Unknown command. Do you need help?"
+end

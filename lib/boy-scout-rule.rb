@@ -1,4 +1,8 @@
 class BoyScoutRule
+  def self.report
+    puts `git log --pretty=oneline --abbrev-commit`
+  end
+
   def self.merge(branch)
     if branch.include? "refactor"
       good_merge
