@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boy-scout-rule (0.0.2)
+    boy_scout_rule (0.0.4)
 
 GEM
   remote: https://rubygems.org/
@@ -73,7 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  boy-scout-rule!
+  boy_scout_rule!
   bundler (~> 1.7)
   guard
   guard-rspec

@@ -7,7 +7,7 @@ TODO: Write a gem description
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'boy-scout-rule'
+gem 'boy_scout_rule'
 ```
 
 And then execute:

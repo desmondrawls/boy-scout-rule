@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
-require 'boy-scout-rule'
+require 'boy_scout_rule'
+require 'csv_generator'
 
 action = ARGV[0]
 if action == "merge"
   BoyScoutRule.merge(ARGV[1])
 elsif action == "report"
-  BoyScoutRule.report
+  BoyScoutRule.new(CSVGenerator).report_commit_count(`git log --pretty=oneline --abbrev-commit`)
 else
   puts "Unknown command. Do you need help?"
 end

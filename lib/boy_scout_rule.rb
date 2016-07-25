@@ -1,6 +1,16 @@
 class BoyScoutRule
-  def self.report
-    puts `git log --pretty=oneline --abbrev-commit`
+  def initialize(printer)
+    @printer = printer
+  end
+
+  def report_commit_count(history)
+    commits = history.split('\n')
+    @printer.print(commits.count)
+  end
+
+  def report_file_changes(commit)
+    file_changes = /(\d+) files changed/.match(commit)[1]
+    @printer.print(file_changes.to_i)
   end
 
   def self.merge(branch)

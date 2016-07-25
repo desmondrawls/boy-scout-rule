@@ -1,10 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'boy-scout-rule/version'
+require 'boy_scout_rule/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "boy-scout-rule"
-  spec.version       = Boy::Scout::Rule::VERSION
+  spec.name          = "boy_scout_rule"
+  spec.version       = BoyScoutRuleVersion::VERSION
   spec.authors       = ["Desmond Pompa Alarcon Rawls"]
   spec.email         = ["drawls@pivotal.io"]
   spec.summary       = "A code review tool."
