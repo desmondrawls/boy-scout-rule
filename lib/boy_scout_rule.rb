@@ -4,7 +4,7 @@ class BoyScoutRule
   end
 
   def report_commit_count(history)
-    commits = history.split('\n')
+    commits = history.split("\n")
     @printer.print(commits.count)
   end
 
