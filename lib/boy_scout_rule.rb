@@ -8,9 +8,9 @@ class BoyScoutRule
     @printer.print(commits.count)
   end
 
-  def report_file_changes(commit)
-    file_changes = /(\d+) files changed/.match(commit)[1]
-    @printer.print(file_changes.to_i)
+  def report_file_changes(commit, changes)
+    file_changes = /(\d+) files changed/.match(changes)[1]
+    @printer.add({commit => {:files => file_changes.to_i}})
   end
 
   def self.merge(branch)

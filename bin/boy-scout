@@ -5,8 +5,13 @@ require 'csv_generator'
 action = ARGV[0]
 if action == "merge"
   BoyScoutRule.merge(ARGV[1])
-elsif action == "report"
+elsif action == "commits"
   BoyScoutRule.new(CSVGenerator).report_commit_count(`git log --pretty=oneline --abbrev-commit`)
+elsif action == "files"
+  commits = `git log --pretty=format:"%h"`.split("\n")
+  commits.each do |commit|
+    BoyScoutRule.new(CSVGenerator).report_file_changes(commit, `git show #{commit} --stat`)
+  end
 else
   puts "Unknown command. Do you need help?"
 end
